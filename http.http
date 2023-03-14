@@ -1,0 +1,12 @@
+### Send POST request with json body
+POST http://localhost:80/message/receive
+Content-Type: application/json
+
+{
+  "ToUserName": "gh_919b00572d95",
+  "FromUserName": "oVneZ57wJnV-ObtCiGv26PRrOz2g",
+  "CreateTime": 1651049934,
+  "MsgType": "text",
+  "Content": "回复文本",
+  "MsgId": 23637352235060880
+}

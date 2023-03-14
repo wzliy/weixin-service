@@ -1,5 +1,6 @@
 package com.tencent.wxcloudrun.controller;
 
+import com.tencent.wxcloudrun.model.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,8 +24,8 @@ public class MessageController {
      * @return API response json
      */
     @PostMapping(value = "/receive")
-    public String get(@RequestBody String action) {
-        logger.info("收到消息推送：{}", action);
+    public String get(@RequestBody Message message) {
+        logger.info("收到消息推送：{}", message.getContent());
 
         return "success";
     }
